@@ -18,9 +18,9 @@ FEEDS = {
 
 
 # with this agent, a single user can make 10-20 requests to the website after that the website will block the user or
-# it will set the user capcha to know that it is a human. other wise it knows the website is scraped and clock the
-
-# user. USER_AGENT = 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko)
+# it will set the user capcha to know that it is a human. other wise it knows the website is scraped and block the
+# user.
+# USER_AGENT = 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko)
 # Chrome/125.0.0.0 Mobile Safari/537.36'
 
 
