@@ -16,6 +16,10 @@ FEEDS = {
     'data.json': {'format': 'json'}
 }
 
+SCRAPEOPS_API_KEY = "96de7bc7-7ede-4bd6-8402-1d26c72457ff"
+SCRAPEOPS_FAKE_USER_AGENT_ENDPOINT = "https://headers.scrapeops.io/v1/user-agents"
+SCRAPEOPS_FAKE_USER_AGENT_ENABLED = True
+SCRAPEOPS_NUM_RESULTS = 5
 
 # with this agent, a single user can make 10-20 requests to the website after that the website will block the user or
 # it will set the user capcha to know that it is a human. other wise it knows the website is scraped and block the
@@ -28,7 +32,7 @@ FEEDS = {
 #USER_AGENT = "bookscraper (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False  # We are not going to obey the robots.txt file. It mostly used for complex websites.
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -55,14 +59,16 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-SPIDER_MIDDLEWARES = {
-    "bookscraper.middlewares.BookscraperSpiderMiddleware": 543,
-}
+# SPIDER_MIDDLEWARES = {
+#     "bookscraper.middlewares.BookscraperSpiderMiddleware": 543,
+# }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    "bookscraper.middlewares.BookscraperDownloaderMiddleware": 543,
+    # "bookscraper.middlewares.BookscraperDownloaderMiddleware": 543,
+    # "bookscraper.middlewares.ScrapeOpsFakeUrlAgentMiddleware": 400,
+    "bookscraper.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
 }
 
 # Enable or disable extensions
@@ -75,7 +81,7 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     "bookscraper.pipelines.BookscraperPipeline": 300,
-    "bookscraper.pipelines.SaveToMySqlPipeline": 400,
+    # "bookscraper.pipelines.SaveToMySqlPipeline": 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
