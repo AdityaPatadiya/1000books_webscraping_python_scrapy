@@ -150,69 +150,6 @@ class ScrapeOpsFakeUrlAgentMiddleware:
         print(request.headers['User-Agent'])
 
 
-# it will create a new complete header every time.
-# class ScrapeopsFakeBrowserHeaderAgentMiddleware:
-#
-#     @classmethod
-#     def from_crawler(cls, crawler):
-#         return cls(crawler.settings)
-#
-#     def __init__(self, settings):
-#         self.scrapeops_api_key = settings.get('SCRAPEOPS_API_KEY')
-#         self.scrapeops_endpoint = settings.get('SCRAPEOPS_FAKE_USER_AGENT_ENDPOINT', 'https://headers.scrapeops.io/v1/browser-headers')
-#         self.scrapeops_fake_browser_headers_active = settings.get('SCRAPEOPS_FAKE_BROWSWSER_HEADERS_ENABLED', True)
-#         self.scrapeops_num_results = settings.get('SCRAPEOPS_NUM_RESULTS')
-#         self.headers_list = []
-#         self._get_headers_list()
-#         self._scrapeops_fake_browser_headers_enabled()
-#
-#     def _get_headers_list(self):
-#         payload = {'api_key': self.scrapeops_api_key}
-#         if self.scrapeops_num_results is not None:
-#             payload['num_results'] = self.scrapeops_num_results
-#         response = requests.get(self.scrapeops_endpoint, params=urlencode(payload))
-#         json_response = response.json()
-#         self.headers_list = json_response.get('result', [])
-#
-#     def _get_random_browser_header(self):
-#         random_index = randint(0, len(self.headers_list) - 1)
-#         return self.headers_list[random_index]
-#
-#     def _scrapeops_fake_browser_headers_enabled(self):
-#         if self.scrapeops_api_key is None or self.scrapeops_api_key == '' or self.scrapeops_fake_browser_headers_active == False:
-#             self.scrapeops_fake_browser_headers_active = False
-#         else:
-#             self.scrapeops_fake_browser_headers_active = True
-#
-#     def process_request(self, request, spider):
-#         random_browser_header = self._get_random_browser_header()
-#
-#         print("**************")
-#         print(type(random_browser_header))  # print the type of random_browser_header
-#         print(random_browser_header)  # print the random_browser_header
-#         print("**************")
-#
-#         if isinstance(random_browser_header, dict):
-#             request.headers['accept-language'] = random_browser_header.get('accept-language', '')
-#             request.headers['sec-fetch-user'] = random_browser_header.get('sec-fetch-user', '')
-#             request.headers['sec-fetch-mod'] = random_browser_header.get('sec-fetch-mod', '')
-#             request.headers['sec-fetch-site'] = random_browser_header.get('sec-fetch-site', '')
-#             request.headers['sec-ch-ua-platform'] = random_browser_header.get('sec-ch-ua-platform', '')
-#             request.headers['sec-ch-ua-mobile'] = random_browser_header.get('sec-ch-ua-mobile', '')
-#             request.headers['sec-ch-ua'] = random_browser_header.get('sec-ch-ua', '')
-#             request.headers['accept'] = random_browser_header.get('accept', '')
-#             request.headers['user-agent'] = random_browser_header.get('user-agent', '')
-#             request.headers['upgrade-insecure-requests'] = random_browser_header.get('upgrade-insecure-requests', '')
-#
-#             print("************** NEW HEADER ATTACHED **************")
-#             print(request.headers)
-#         else:
-#             print("Error: random_browser_header is not a dictionary")
-#
-#         print("************** NEW HEADER ATTACHED **************")
-#         print(request.headers)
-
-
 class ScrapeOpsFakeBrowserHeaderAgentMiddleware:
 
     @classmethod
