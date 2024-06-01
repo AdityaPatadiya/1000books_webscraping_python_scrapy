@@ -4,12 +4,12 @@ The [scrapy](https://scrapy.org/) library is very useful to scrap the large amou
 The [scrapeops api](https://scrapeops.io/) is used for the different BrowserHeaders.
 
 ## Table of Contents
-- [Requirements](https://github.com/AdityaPatadiya/1000books_webscraping_python_scrapy/blob/main/README.md#requirements)
-- [Installation](https://github.com/AdityaPatadiya/1000books_webscraping_python_scrapy/blob/main/README.md#installation)
-- [How to Run the Project](https://github.com/AdityaPatadiya/1000books_webscraping_python_scrapy/blob/main/README.md#how-to-run-the-project)
-- [What I've Done](https://github.com/AdityaPatadiya/1000books_webscraping_python_scrapy/blob/main/README.md#what-ive-done)
-- [Key Files](https://github.com/AdityaPatadiya/1000books_webscraping_python_scrapy/blob/main/README.md#key-files)
-- [Contributing](https://github.com/AdityaPatadiya/1000books_webscraping_python_scrapy/blob/main/README.md#contributing)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [How to Run the Project](#how-to-run-the-project)
+- [What I've Done](#what-ive-done)
+- [Key Files](#key-files)
+- [Contributing](#contributing)
 
 ## Requirements: -
 1. Python
