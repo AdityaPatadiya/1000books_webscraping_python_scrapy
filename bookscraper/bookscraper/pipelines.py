@@ -11,7 +11,6 @@
 from itemadapter import ItemAdapter
 import logging
 import sqlite3
-# import mysql.connector
 
 logging.basicConfig(
     level=logging.INFO,
