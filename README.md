@@ -4,12 +4,12 @@ The [scrapy](https://scrapy.org/) library is very useful to scrap the large amou
 The [scrapeops api](https://scrapeops.io/) is used for the different BrowserHeaders.
 
 ## Table of Contents
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [How to Run the Project](#how-to-run-the-project)
-- [What I've Done](#what-ive-done)
+- [Requirements](#requirements--)
+- [Installation](#installation--)
+- [How to Run the Project](#how-to-run-the-project--)
+- [What I've Done](#what-ive-done--)
 - [Key Files](#key-files)
-- [Contributing](#contributing)
+- [Contributing](#contributing--)
 
 ## Requirements: -
 1. Python
