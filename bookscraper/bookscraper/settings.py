@@ -32,7 +32,7 @@ SCRAPEOPS_NUM_RESULTS = 5
 #USER_AGENT = "bookscraper (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True  # We are not going to obey the robots.txt file. It mostly used for complex websites.
+ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
