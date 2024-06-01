@@ -16,7 +16,7 @@ FEEDS = {
     'data.json': {'format': 'json'}
 }
 
-SCRAPEOPS_API_KEY = "96de7bc7-7ede-4bd6-8402-1d26c72457ff"
+SCRAPEOPS_API_KEY = "YOUR_API_KEY"
 SCRAPEOPS_FAKE_USER_AGENT_ENDPOINT = "https://headers.scrapeops.io/v1/user-agents"
 SCRAPEOPS_FAKE_USER_AGENT_ENABLED = True
 SCRAPEOPS_NUM_RESULTS = 5
